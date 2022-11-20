@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: vip-customer-web
+  namespace: vip-customer-app
+spec:
+  selector:
+    app: vip-customer-web
+  ports:
+    - name: http
+      protocol: TCP
+      port: 3000
+      targetPort: 3000

@@ -1,0 +1,10 @@
+services:
+  - docker
+
+script:
+  - docker build -t vip-customer-web:v1 ./frontend
+  - docker tag vip-customer-web:v1 kennedyuche/vip-customer-web:v1
+
+after_success:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker push kennedyuche/vip-customer-web:v1

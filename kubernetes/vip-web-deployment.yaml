@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vip-customer-web
+  namespace: vip-customer-app
+spec:
+  selector:
+    matchLabels:
+      app: vip-customer-web
+  template:
+    metadata:
+      labels:
+        app: vip-customer-web
+    spec:
+      containers:
+      - name: vip-customer-web
+        image: kennedyuche/vip-customer-web:v1
+        imagePullPolicy: Always
+        # resources:
+        #   limits:
+        #     memory: "128Mi"
+        #     cpu: "500m"
+        ports:
+        - containerPort: 3000

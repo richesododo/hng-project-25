@@ -1,0 +1,13 @@
+.main {
+  width: 100%;
+  max-width: 1513px;
+  margin: 0 auto;
+  padding: 3.8rem 0;
+  box-sizing: border-box;
+}
+
+.container {
+  box-sizing: border-box;
+  width: 95%;
+  margin: 0 auto;
+}

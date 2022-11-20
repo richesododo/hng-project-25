@@ -1,0 +1,24 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: vip-customer-web
+  namespace: vip-customer-app
+spec:
+  selector:
+    istio: ingress # update with the correct istio ingress
+  servers:
+  - port:
+      number: 80
+      name: http
+      protocol: HTTP
+    hosts:
+    - "*" # replace "*" with "vip-customer.domain"
+  # - port:
+  #     number: 443
+  #     name: https
+  #     protocol: HTTPS
+  #   tls:
+  #     mode: SIMPLE
+  #     credentialName: <replace-with-certificate-name>
+  #   hosts:
+  #   - "*" # replace "*" with "vip-customer.domain"

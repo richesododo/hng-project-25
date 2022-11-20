@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  # backend:
+  #   image: kennedyuche/app-backend:v1
+  #   command: ["python", "manage.py", "runserver"]
+  #   volumes:
+  #     - ./api:/app/backend
+  #   ports:
+  #     - "8000:8000"
+  frontend:
+    image: kennedyuche/vip-customer-web:v1
+    command: ["npm", "start"]
+    volumes:
+      - ./frontend:/app/frontend
+      - node-modules:/app/frontend/node_modules
+    ports:
+      - "3000:3000"
+
+volumes:
+  node-modules:

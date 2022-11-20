@@ -1,0 +1,12 @@
+.container{
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  .container{
+    text-align: left;
+  }
+.gridcontainer{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+}
