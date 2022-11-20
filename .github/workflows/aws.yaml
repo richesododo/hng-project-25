@@ -1,6 +1,6 @@
 on:
   push:
-    branches: [finished]
+    branches: [master]
 
 name: Deploy Demo App on ECS
 
