@@ -44,7 +44,7 @@ jobs:
         with:
           context: ./frontend
           load: true
-          tags: vip-customer-web:v1
+          tags: kennedyuche/vip-customer-web:v1
         
       - name: Fill in the new image ID in the Amazon ECS task definition
         id: task-def
